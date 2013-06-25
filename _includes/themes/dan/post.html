@@ -1,0 +1,82 @@
+<div class="page-header">
+  	<h1>
+  		【<a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ page.category }}-ref">{{ page.category }}</a>】 {{ page.title }} 
+  		<small> {{ page.date | date_to_string }} </small>
+	</h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    {{ content }}
+    <hr>
+    <div class="pagination">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
+    <hr>
+    {% include JB/comments %}
+  </div>
+  
+  <div class="span4">
+
+    <ul id="social_link" class="clearfix">
+      <li class="rss_button">
+        <a class="target_blank" href="/atom.xml" target="_blank">rss</a>
+      </li>
+      <li class="twitter_button">
+        <a class="target_blank" href="https://twitter.com/shanhh" target="_blank">twitter</a>
+      </li>
+    </ul>
+
+  {% unless page.tags == empty %}
+    <div class="sidebar-title">标签</div>
+    <ul class="tag_box">
+    {% assign tags_list = page.tags %}
+    {% include JB/tags_list %}
+    </ul>
+  {% endunless %}  
+  
+    <hr>
+  
+  	<div class="sidebar-title">相关文章</div>
+    <ul>
+    {% for related_post in site.related_posts limit:5 %}
+    	<li><a href="{{ BASE_PATH }}{{ related_post.url }}">{{ related_post.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+    <hr>
+
+    <div class="sidebar-title">版权申明</div>
+      <p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/cn/" target="_blank" class="hide-target-icon" title="本站(博客)作品全部采用知识共享署名-非商业性使用-禁止演绎 2.5 中国大陆许可协议进行许可。转载请通知作者并注明出处。"><img alt="知识共享许可协议" src="{{ ASSET_PATH }}/img/by-nc-nd.png" /></a></p>
+
+    <div class="sidebar-title">Powered by</div>
+    <p>
+      <a href="http://disqus.com/" target="_blank" title="云评论服务">Disqus</a>,
+      <!--
+      <a href="http://elfjs.com/" target="_blank">elf+js</a>,
+      -->
+      <a href="https://github.com/" target="_blank">GitHub</a>,
+      <a href="https://bitbucket.org/" target="_blank">Bitbucket</a>,
+      <a href="http://tapirgo.com/" target="_blank" title="自定义站内搜索">Tapir</a>,
+      <a href="http://en.gravatar.com/" target="_blank" title="统一头像标识服务">Gravatar</a>,
+      <a href="http://pygments.org/" target="_blank">Pygments</a>,
+      <a href="https://github.com/mojombo/jekyll" target="_blank">Jekyll</a>,
+      <a href="http://jekyllbootstrap.com/" target="_blank">JekyllBootstrap</a>
+      <!--a href="https://github.com/mytharcher/SimpleGray" target="_blank">SimpleGray</a-->
+    </p>
+
+  </div>
+
+</div>
