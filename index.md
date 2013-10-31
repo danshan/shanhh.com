@@ -60,9 +60,6 @@ description: "Dan's Workspace"
             </ul>
         </div>
         <br>
-        <div class="sidebar-title">BBM Me</div>
-        <img src="/assets/img/bbm_pin.png" alt="BBM me" />
-        <br>
         <div class="sidebar-title">Bitbucket Repositories</div>
         <div>
             <ul class="tag_box">
