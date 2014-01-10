@@ -72,6 +72,13 @@ description: "Dan's Workspace"
                 <li><a class="btn btn-small" target="_blank" href="https://bitbucket.org/danshan/blog">blog</a></li>
             </ul> 
         </div>
+        <div class="sidebar-title">Links</div>
+        <div>
+            <ul class="tag_box inline">
+                <li><a class="btn btn-small" target="_blank" href="http://baniu.me">姚仁捷</a></li>
+                <li><a class="btn btn-small" target="_blank" href="http://zhwb.weebly.com">张文斌</a></li>
+            </ul> 
+        </div>
     </div>
 </td>
 </tr>
