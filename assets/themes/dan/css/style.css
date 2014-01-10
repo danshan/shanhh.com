@@ -208,10 +208,13 @@ img[alt="blogging"] {
     margin-left: 4px;
 }
 #social_link li.twitter_button a {
-    background: url("/assets/img/twitter.gif") no-repeat scroll left top transparent;
+    background: url("/assets/themes/dan/img/twitter.gif") no-repeat scroll left top transparent;
 }
 #social_link li.rss_button a {
-    background: url("/assets/img/rss.gif") no-repeat scroll left top transparent;
+    background: url("/assets/themes/dan/img/rss.gif") no-repeat scroll left top transparent;
+}
+#social_link li.weibo_button a {
+    background: url("/assets/themes/dan/img/weibo.gif") no-repeat scroll left top transparent;
 }
 #social_link li a {
     display: block;

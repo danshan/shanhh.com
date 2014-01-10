@@ -37,6 +37,9 @@ description: "Dan's Workspace"
 <td width="30%" style="vertical-align:top;">
     <div class="home-page-sidebar">
         <ul id="social_link" class="clearfix">
+            <li class="weibo_button">
+                <a class="target_blank" href="http://weibo.com/danshan" target="_blank">rss</a>
+            </li>
             <li class="rss_button">
                 <a class="target_blank" href="/atom.xml" target="_blank">rss</a>
             </li>
